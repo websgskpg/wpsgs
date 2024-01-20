@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="countdown">
+        <h2>Countdown</h2>
+        <div class="container">
+            <div id="hari">
+                Nothing
+            </div>
+            <div id="jam">
+                Nothing
+            </div>
+            <div id="menit">
+                Nothing
+            </div>
+            <div id="detik">
+                Nothing
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function time() {
+        var sekarang = new Date().getTime();
+        var target = new Date('sep 30 2023 00:00:00').getTime();
+        selisih = target - sekarang;
+        var detik = 1000;
+        var menit = detik * 60;
+        var jam = menit * 60;
+        var hari = jam * 24;
+
+        var h = Math.floor(selisih / (hari));
+        var j = Math.floor(selisih % (hari) / (jam));
+        var m = Math.floor(selisih % (jam) / (menit));
+        var d = Math.floor(
+            selisih % (menit) / (detik));
+
+        document.getElementById('hari').innerText = h;
+        document.getElementById('jam').innerText = j;
+        document.getElementById('menit').innerText = m;
+        document.getElementById('detik').innerText = d;
+
+    }
+    setInterval(function () {
+        time();
+    }, 1000);
+
+</script>
+
+</html>
