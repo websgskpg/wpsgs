@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <label for="username">Username :</label>
+        <input type="text" id="username" placeholder="Masukan Username">
+        <label for="password">Password :</label>
+        <input type="password" id="password" placeholder="Masukkan Password">
+        <button onclick="login()">Login</button>
+    </div>
+</body>
+<script type="text/javascript">
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        var correctUsername = 'wpsgs';
+        var correctPassword = '1234';
+        var correctUsername2 = '12345';
+        var correctPassword2 = 'qwert';
+
+        if (username === correctUsername && password === correctPassword) {
+            alert('login Succes');
+            window.location.href = 'latihan1.html';
+        } else if (username === correctUsername2 && password === correctPassword2) {
+            alert('user2');
+            window.location.href = 'latihan1.html';
+        } else {
+            alert('gdsgfsdfgsd');
+        }
+    }
+</script>
+
+</html>
