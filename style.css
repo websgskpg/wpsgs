@@ -1,0 +1,35 @@
+.container {
+	display: flex;
+	margin-top: 50px;
+}
+
+.container div {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	background: linear-gradient(#771c1c, #994e4e);
+	color: #801111;
+	margin: 0 10px;
+	font-size: 3em;
+	font-weight: 500;
+}
+
+.countdown h2 {
+	text-align: center;
+}
+
+.countdown div:before {
+	position: absolute;
+	content: '';
+	background: #bb1313;
+	height: 50px;
+	width: 100%;
+	bottom: -30px;
+	left: 0;
+	color: #c2c2c2;
+	font-size: 0.35em;
+	line-height: 35px;
+	font-weight: 300;
+}
